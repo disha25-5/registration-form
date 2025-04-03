@@ -18,11 +18,11 @@ db.once('open',()=> console.log("Connected to Database"))
 app.post("/sign_up",(req,res) => {
     var name= req.body.name
     var name= req.body.name
-    // var age=req.body.age
+    var age=req.body.age
     var email=req.body.email
     var phno=req.body.phno
-    // var gender=req.body.gender
-    // var password=req.body.password
+     var gender=req.body.gender
+    var password=req.body.password
 
     var data={
         "name":name,
