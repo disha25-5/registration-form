@@ -14,7 +14,7 @@
                 
             </div>
             <div class="col-md-6 main">
-                <form action="/signup_successful.html"  method="get">
+                <form action="/signup_successful.html"  method="post">
                     <h2> Registration Form</h2>
                     <input type="text" class="box" id="name" name="name" placeholder="Name" required/>
                     <br>
@@ -34,6 +34,22 @@
             </div>
         </div>
     </div>
-    
+    <script>
+  // Get the form element
+  const form = document.getElementById('registrationForm');
+
+  // Add an event listener for the 'submit' event
+  form.addEventListener('submit', function(event) {
+    // Prevent the default form submission (which causes the 405 error)
+    event.preventDefault();
+
+    // --- Optional: Add code here later to actually send data ---
+    // console.log('Form data would be sent here...');
+    // For example, using fetch() to send to an API endpoint
+
+    // Redirect the user to the success page
+    window.location.href = 'signup_successful.html';
+  });
+</script>
 </body>
 </html>
